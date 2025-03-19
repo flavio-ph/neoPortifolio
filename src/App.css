@@ -715,3 +715,42 @@ body {
   }
 }
 
+/* Ajuste para a seção de skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .skills-container {
+      flex-direction: column; /* Alinha um abaixo do outro */
+      align-items: center;
+  }
+
+  .skill-item {
+      width: 80%; /* Ajusta o tamanho para ocupar mais espaço */
+      text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-item {
+      width: 100%; /* Para telas bem pequenas, ocupar 100% */
+  }
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden; /* Garante que só um item apareça */
+  width: 100%;
+  max-width: 400px; /* Ajuste conforme necessário */
+  margin: auto;
+}
+
+.carousel-item {
+  min-width: 100%; /* Faz com que cada item ocupe toda a largura do contêiner */
+  transition: transform 0.5s ease-in-out;
+}
